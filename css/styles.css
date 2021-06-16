@@ -1,0 +1,169 @@
+:root {
+
+	/* Common  */
+
+	/* Theme 1  */
+		--main-bg: hsl(222, 26%, 31%);
+		--toggle-bg: hsl(223, 31%, 20%);
+		--screen-bg: hsl(224, 36%, 15%);
+
+		/* Special keys  */
+		--skey-bg: hsl(225, 21%, 49%);
+		--skey-shadow: hsl(224, 28%, 35%);
+		--equal-key-bg: hsl(6, 63%, 50%);
+		--equal-key-shadow: hsl(6, 70%, 34%);
+
+		/* Keys  */
+		--key-bg: hsl(30, 25%, 89%);
+		--key-shadow: hsl(28, 16%, 65%);
+
+		/* Text  */
+		--btn-txt: hsl(221, 14%, 31%);
+		--txt: #fff;
+}
+
+
+*{
+	margin:  0;
+	padding:  0;
+	font-family: 'Spartan', sans-serif;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.container{
+	width: 90%;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 4rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.header{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+
+.theme-main-bg{
+	background-color: var(--main-bg);
+	color: var(--txt);
+	border: 1px solid transparent;
+}
+
+.logo{
+	font-size: 2rem;
+	font-weight: 600;
+	align-self: center;
+	padding-top: 1.5rem;
+}
+
+.preference{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+					".     label"
+					"theme button";
+	align-items: center;
+	justify-self: end;
+	width: 13rem;
+}
+
+[data-grid-element="label"]{
+	grid-area: label;
+}
+
+[data-grid-element="theme"]{
+	grid-area: theme;
+}
+
+[data-grid-element="button"]{
+	grid-area: button;
+}
+
+.toggle-label,
+.toggle-btn{
+	display: grid;
+	min-width: 6rem;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+}
+
+.toggle-btn{
+	background-color: var(--toggle-bg);
+	padding: 5px 5px;
+	border-radius: 20px;
+}
+
+.toggle-btn > li{
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.toggle-btn > li.active{
+	background-color: var(--equal-key-bg);
+}
+
+.key-grp,
+.screen{
+	border-radius: 0.5rem;
+}
+
+.screen{
+	background-color: var(--screen-bg);
+	min-height: 5.5rem;
+	margin: 2.8rem 0 1.5rem 0;
+}
+
+.key-grp{
+	flex-grow: 1;
+	flex-basis: 0;
+	background-color: var(--toggle-bg);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas: 
+		"key7    key8    key9    key-del"
+		"key4    key5    key6    key-plus"
+		"key1    key2    key3    key-min"
+		"key-dot key0    key-div key-tim"
+		"key-res key-res key-eql key-eql";
+	gap: 0.81rem;
+	padding: 1.56rem;
+	place-items: center;
+}
+
+#key7{ grid-area: key7}
+#key8{ grid-area: key8}
+#key9{ grid-area: key9}
+#key-del{ grid-area: key-del}
+#key4{ grid-area: key4}
+#key5{ grid-area: key5}
+#key6{ grid-area: key6}
+#key-plus{ grid-area: key-plus}
+#key1{ grid-area: key1}
+#key2{ grid-area: key2}
+#key3{ grid-area: key3}
+#key-min{ grid-area: key-min}
+#key-dot{ grid-area: key-dot}
+#key0{ grid-area: key0}
+#key-div{ grid-area: key-div}
+#key-tim{ grid-area: key-tim}
+#key-res{ grid-area: key-res}
+#key-eql{ grid-area: key-eql}
+
+
+
+@media (min-width: 376px){
+	.container{
+		max-width: 33.9rem;
+	}
+}

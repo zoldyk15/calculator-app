@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Custom Style -->
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/script.js" defer></script>
+</head>
+<body>
+	<div id="bg" class="theme-main-bg">
+		<div class="container">
+			<div class="header">
+				<div class="logo">calc</div>
+				<div class="preference">
+					<div data-grid-element="theme">THEME</div>
+					<ul class="toggle-label" data-grid-element="label">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
+					<ul class="toggle-btn" data-grid-element="button">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="screen"></div>
+			<div class="key-grp">
+				<div id="key7"     class="num-op-key" >7</div>
+				<div id="key8"     class="num-op-key" >8</div>
+				<div id="key9"     class="num-op-key" >9</div>
+				<div id="key-del"  class="special-key">DEL</div>
+				<div id="key4"     class="num-op-key" >4</div>
+				<div id="key5"     class="num-op-key" >5</div>
+				<div id="key6"     class="num-op-key" >6</div>
+				<div id="key-plus" class="num-op-key" >+</div>
+				<div id="key1"     class="num-op-key" >1</div>
+				<div id="key2"     class="num-op-key" >2</div>
+				<div id="key3"     class="num-op-key" >3</div>
+				<div id="key-min"  class="num-op-key" >-</div>
+				<div id="key-dot"  class="num-op-key" >.</div>
+				<div id="key0"     class="num-op-key" >0</div>
+				<div id="key-div"  class="num-op-key" >/</div>
+				<div id="key-tim"  class="num-op-key" >&times;</div>
+				<div id="key-res"  class="special-key">RESET</div>
+				<div id="key-eql"  class="eql-key"    >=</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
