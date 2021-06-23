@@ -20,6 +20,7 @@
 		/* Text  */
 		--btn-txt: hsl(221, 14%, 31%);
 		--txt: #fff;
+		--total: #a6a6a6;
 }
 
 
@@ -34,26 +35,28 @@ ul{
 	list-style-type: none;
 }
 
-.container{
-	width: 90%;
-	min-height: 100vh;
-	margin: 0 auto;
-	padding: 4rem 0;
-	display: flex;
-	flex-direction: column;
-}
-
-
-.header{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-}
-
 
 .theme-main-bg{
 	background-color: var(--main-bg);
 	color: var(--txt);
 	border: 1px solid transparent;
+	height: 100vh;
+}
+
+.container{
+	height: 90vh; 
+	width: 90%; 
+	margin: auto;
+	padding: 4rem 0;
+	display: flex; 
+	flex-direction: column;
+}
+
+
+
+.header{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .logo{
@@ -112,24 +115,39 @@ ul{
 	background-color: var(--equal-key-bg);
 }
 
-.key-grp,
-.screen{
-	border-radius: 0.5rem;
-}
 
 .screen{
 	background-color: var(--screen-bg);
 	min-height: 5.5rem;
 	margin: 2.8rem 0 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	font-size: 1.3rem;
+}
+
+
+.screen > div:nth-child(2){
+	color: var(--total);
+}
+
+.key-grp,
+.screen{
+	border-radius: 0.5rem;
+}
+
+.keypad{
+	flex: 1;
 }
 
 .key-grp{
-	flex-grow: 1;
-	flex-basis: 0;
-	background-color: var(--toggle-bg);
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(5, 1fr);
+	padding: 2rem;
+	height: 100%;
+	display: grid; 
+	grid-template-columns: repeat(4, 1fr); 
+	grid-template-rows: repeat(5, 1fr); 
 	grid-template-areas: 
 		"key7    key8    key9    key-del"
 		"key4    key5    key6    key-plus"
@@ -137,7 +155,11 @@ ul{
 		"key-dot key0    key-div key-tim"
 		"key-res key-res key-eql key-eql";
 	gap: 0.81rem;
-	padding: 1.56rem;
+	background-color: var(--toggle-bg);
+}
+
+.key-grp > div{
+	display: grid;
 	place-items: center;
 }
 
@@ -160,6 +182,36 @@ ul{
 #key-res{ grid-area: key-res}
 #key-eql{ grid-area: key-eql}
 
+
+.key{
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+.num-op-key,
+.special-key,
+.eql-key{
+	border-bottom-style: solid;
+	border-bottom-width: 0.33rem;
+}
+
+.num-op-key{
+	background-color: var(--key-bg);
+	color: var(--btn-txt);
+	border-bottom-color: var(--key-shadow);
+}
+
+.special-key{
+	background-color: var(--skey-bg);
+	border-bottom-color: var(--skey-shadow);
+}
+
+.eql-key{
+	background-color: var(--equal-key-bg);
+	border-bottom-color: var(--equal-key-shadow);
+}
 
 
 @media (min-width: 376px){

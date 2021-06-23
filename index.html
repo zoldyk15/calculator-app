@@ -12,11 +12,20 @@
 	<!-- Custom Style -->
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/jquery.min.js" defer></script>
 	<script src="./js/script.js" defer></script>
+
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+	</style>
 </head>
 <body>
-	<div id="bg" class="theme-main-bg">
+	<div class="theme-main-bg">
 		<div class="container">
 			<div class="header">
 				<div class="logo">calc</div>
@@ -34,26 +43,33 @@
 					</ul>
 				</div>
 			</div>
-			<div class="screen"></div>
-			<div class="key-grp">
-				<div id="key7"     class="num-op-key" >7</div>
-				<div id="key8"     class="num-op-key" >8</div>
-				<div id="key9"     class="num-op-key" >9</div>
-				<div id="key-del"  class="special-key">DEL</div>
-				<div id="key4"     class="num-op-key" >4</div>
-				<div id="key5"     class="num-op-key" >5</div>
-				<div id="key6"     class="num-op-key" >6</div>
-				<div id="key-plus" class="num-op-key" >+</div>
-				<div id="key1"     class="num-op-key" >1</div>
-				<div id="key2"     class="num-op-key" >2</div>
-				<div id="key3"     class="num-op-key" >3</div>
-				<div id="key-min"  class="num-op-key" >-</div>
-				<div id="key-dot"  class="num-op-key" >.</div>
-				<div id="key0"     class="num-op-key" >0</div>
-				<div id="key-div"  class="num-op-key" >/</div>
-				<div id="key-tim"  class="num-op-key" >&times;</div>
-				<div id="key-res"  class="special-key">RESET</div>
-				<div id="key-eql"  class="eql-key"    >=</div>
+			<div class="screen">
+				<div id="formula"></div>
+				<div id="total"></div>
+			</div>
+			<div class="keypad">
+				<div class="key-grp">
+
+					<div id="key7"     class="key num-op-key" data-value="7">7</div>
+					<div id="key8"     class="key num-op-key" data-value="8">8</div>
+					<div id="key9"     class="key num-op-key" data-value="9">9</div>
+					<div id="key-del"  class="key special-key">DEL</div>
+					<div id="key4"     class="key num-op-key" data-value="4">4</div>
+					<div id="key5"     class="key num-op-key" data-value="5">5</div>
+					<div id="key6"     class="key num-op-key" data-value="6">6</div>
+					<div id="key-plus" class="key num-op-key" data-value="+">+</div>
+					<div id="key1"     class="key num-op-key" data-value="1">1</div>
+					<div id="key2"     class="key num-op-key" data-value="2">2</div>
+					<div id="key3"     class="key num-op-key" data-value="3">3</div>
+					<div id="key-min"  class="key num-op-key" data-value="-">-</div>
+					<div id="key-dot"  class="key num-op-key" data-value=".">.</div>
+					<div id="key0"     class="key num-op-key" data-value="0">0</div>
+					<div id="key-div"  class="key num-op-key" data-value="/">/</div>
+					<div id="key-tim"  class="key num-op-key" data-value="×">×</div>
+					<div id="key-res"  class="key special-key">RESET</div>
+					<div id="key-eql"  class="key eql-key">=</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
