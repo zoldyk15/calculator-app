@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>isValid</title>
+	<script>
+		
+		let pattern = /^-?(?:\.|(?:\d+\.))?\d+[-\+×\/](?:\.|(?:\d+\.))?\d+/
+
+		console.log(".4+3".search(pattern) > -1 ? true : false)
+		console.log(".4-3".search(pattern) > -1 ? true : false)
+		console.log(".4×3".search(pattern) > -1 ? true : false)
+		console.log(".4/3".search(pattern) > -1 ? true : false)
+
+		console.log("4+.3".search(pattern) > -1 ? true : false)
+		console.log("4-.3".search(pattern) > -1 ? true : false)
+		console.log("4×.3".search(pattern) > -1 ? true : false)
+		console.log("4/.3".search(pattern) > -1 ? true : false)
+
+		console.log("0.4+3".search(pattern) > -1 ? true : false)
+		console.log("0.4-3".search(pattern) > -1 ? true : false)
+		console.log("0.4×3".search(pattern) > -1 ? true : false)
+		console.log("0.4/3".search(pattern) > -1 ? true : false)
+
+		console.log("4+0.3".search(pattern) > -1 ? true : false)
+		console.log("4-0.3".search(pattern) > -1 ? true : false)
+		console.log("4×0.3".search(pattern) > -1 ? true : false)
+		console.log("4/0.3".search(pattern) > -1 ? true : false)
+
+		console.log(".4+.3".search(pattern) > -1 ? true : false)
+		console.log(".4-.3".search(pattern) > -1 ? true : false)
+		console.log(".4×.3".search(pattern) > -1 ? true : false)
+		console.log(".4/.3".search(pattern) > -1 ? true : false)
+
+		console.log("0.4+0.3".search(pattern) > -1 ? true : false)
+		console.log("0.4-0.3".search(pattern) > -1 ? true : false)
+		console.log("0.4×0.3".search(pattern) > -1 ? true : false)
+		console.log("0.4/0.3".search(pattern) > -1 ? true : false)
+
+		console.log("-.4+3".search(pattern) > -1 ? true : false)
+		console.log("-.4-3".search(pattern) > -1 ? true : false)
+		console.log("-.4×3".search(pattern) > -1 ? true : false)
+		console.log("-.4/3".search(pattern) > -1 ? true : false)
+
+		console.log("-4+.3".search(pattern) > -1 ? true : false)
+		console.log("-4-.3".search(pattern) > -1 ? true : false)
+		console.log("-4×.3".search(pattern) > -1 ? true : false)
+		console.log("-4/.3".search(pattern) > -1 ? true : false)
+
+		console.log("-0.4+3".search(pattern) > -1 ? true : false)
+		console.log("-0.4-3".search(pattern) > -1 ? true : false)
+		console.log("-0.4×3".search(pattern) > -1 ? true : false)
+		console.log("-0.4/3".search(pattern) > -1 ? true : false)
+
+		console.log("-4+0.3".search(pattern) > -1 ? true : false)
+		console.log("-4-0.3".search(pattern) > -1 ? true : false)
+		console.log("-4×0.3".search(pattern) > -1 ? true : false)
+		console.log("-4/0.3".search(pattern) > -1 ? true : false)
+
+		console.log("-.4+.3".search(pattern) > -1 ? true : false)
+		console.log("-.4-.3".search(pattern) > -1 ? true : false)
+		console.log("-.4×.3".search(pattern) > -1 ? true : false)
+		console.log("-.4/.3".search(pattern) > -1 ? true : false)
+
+		console.log("-0.4+0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.4-0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.4×0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.4/0.3".search(pattern) > -1 ? true : false)
+
+		console.log(".42+3".search(pattern) > -1 ? true : false)
+		console.log(".42-3".search(pattern) > -1 ? true : false)
+		console.log(".42×3".search(pattern) > -1 ? true : false)
+		console.log(".42/3".search(pattern) > -1 ? true : false)
+
+		console.log("42+.3".search(pattern) > -1 ? true : false)
+		console.log("42-.3".search(pattern) > -1 ? true : false)
+		console.log("42×.3".search(pattern) > -1 ? true : false)
+		console.log("42/.3".search(pattern) > -1 ? true : false)
+
+		console.log("0.42+3".search(pattern) > -1 ? true : false)
+		console.log("0.42-3".search(pattern) > -1 ? true : false)
+		console.log("0.42×3".search(pattern) > -1 ? true : false)
+		console.log("0.42/3".search(pattern) > -1 ? true : false)
+
+		console.log("42+0.3".search(pattern) > -1 ? true : false)
+		console.log("42-0.3".search(pattern) > -1 ? true : false)
+		console.log("42×0.3".search(pattern) > -1 ? true : false)
+		console.log("42/0.3".search(pattern) > -1 ? true : false)
+
+		console.log(".42+.3".search(pattern) > -1 ? true : false)
+		console.log(".42-.3".search(pattern) > -1 ? true : false)
+		console.log(".42×.3".search(pattern) > -1 ? true : false)
+		console.log(".42/.3".search(pattern) > -1 ? true : false)
+
+		console.log("0.42+0.3".search(pattern) > -1 ? true : false)
+		console.log("0.42-0.3".search(pattern) > -1 ? true : false)
+		console.log("0.42×0.3".search(pattern) > -1 ? true : false)
+		console.log("0.42/0.3".search(pattern) > -1 ? true : false)
+
+		console.log("-.42+3".search(pattern) > -1 ? true : false)
+		console.log("-.42-3".search(pattern) > -1 ? true : false)
+		console.log("-.42×3".search(pattern) > -1 ? true : false)
+		console.log("-.42/3".search(pattern) > -1 ? true : false)
+
+		console.log("-42+.3".search(pattern) > -1 ? true : false)
+		console.log("-42-.3".search(pattern) > -1 ? true : false)
+		console.log("-42×.3".search(pattern) > -1 ? true : false)
+		console.log("-42/.3".search(pattern) > -1 ? true : false)
+
+		console.log("-0.42+3".search(pattern) > -1 ? true : false)
+		console.log("-0.42-3".search(pattern) > -1 ? true : false)
+		console.log("-0.42×3".search(pattern) > -1 ? true : false)
+		console.log("-0.42/3".search(pattern) > -1 ? true : false)
+
+		console.log("-42+0.3".search(pattern) > -1 ? true : false)
+		console.log("-42-0.3".search(pattern) > -1 ? true : false)
+		console.log("-42×0.3".search(pattern) > -1 ? true : false)
+		console.log("-42/0.3".search(pattern) > -1 ? true : false)
+
+		console.log("-.42+.3".search(pattern) > -1 ? true : false)
+		console.log("-.42-.3".search(pattern) > -1 ? true : false)
+		console.log("-.42×.3".search(pattern) > -1 ? true : false)
+		console.log("-.42/.3".search(pattern) > -1 ? true : false)
+
+		console.log("-0.42+0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.42-0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.42×0.3".search(pattern) > -1 ? true : false)
+		console.log("-0.42/0.3".search(pattern) > -1 ? true : false)
+
+		console.log(".4+32".search(pattern) > -1 ? true : false)
+		console.log(".4-32".search(pattern) > -1 ? true : false)
+		console.log(".4×32".search(pattern) > -1 ? true : false)
+		console.log(".4/32".search(pattern) > -1 ? true : false)
+
+		console.log("4+.32".search(pattern) > -1 ? true : false)
+		console.log("4-.32".search(pattern) > -1 ? true : false)
+		console.log("4×.32".search(pattern) > -1 ? true : false)
+		console.log("4/.32".search(pattern) > -1 ? true : false)
+
+		console.log("0.4+32".search(pattern) > -1 ? true : false)
+		console.log("0.4-32".search(pattern) > -1 ? true : false)
+		console.log("0.4×32".search(pattern) > -1 ? true : false)
+		console.log("0.4/32".search(pattern) > -1 ? true : false)
+
+		console.log("4+0.32".search(pattern) > -1 ? true : false)
+		console.log("4-0.32".search(pattern) > -1 ? true : false)
+		console.log("4×0.32".search(pattern) > -1 ? true : false)
+		console.log("4/0.32".search(pattern) > -1 ? true : false)
+
+		console.log(".4+.32".search(pattern) > -1 ? true : false)
+		console.log(".4-.32".search(pattern) > -1 ? true : false)
+		console.log(".4×.32".search(pattern) > -1 ? true : false)
+		console.log(".4/.32".search(pattern) > -1 ? true : false)
+
+		console.log("0.4+0.32".search(pattern) > -1 ? true : false)
+		console.log("0.4-0.32".search(pattern) > -1 ? true : false)
+		console.log("0.4×0.32".search(pattern) > -1 ? true : false)
+		console.log("0.4/0.32".search(pattern) > -1 ? true : false)
+
+		console.log("-.4+32".search(pattern) > -1 ? true : false)
+		console.log("-.4-32".search(pattern) > -1 ? true : false)
+		console.log("-.4×32".search(pattern) > -1 ? true : false)
+		console.log("-.4/32".search(pattern) > -1 ? true : false)
+
+		console.log("-4+.32".search(pattern) > -1 ? true : false)
+		console.log("-4-.32".search(pattern) > -1 ? true : false)
+		console.log("-4×.32".search(pattern) > -1 ? true : false)
+		console.log("-4/.32".search(pattern) > -1 ? true : false)
+
+		console.log("-0.4+32".search(pattern) > -1 ? true : false)
+		console.log("-0.4-32".search(pattern) > -1 ? true : false)
+		console.log("-0.4×32".search(pattern) > -1 ? true : false)
+		console.log("-0.4/32".search(pattern) > -1 ? true : false)
+
+		console.log("-4+0.32".search(pattern) > -1 ? true : false)
+		console.log("-4-0.32".search(pattern) > -1 ? true : false)
+		console.log("-4×0.32".search(pattern) > -1 ? true : false)
+		console.log("-4/0.32".search(pattern) > -1 ? true : false)
+
+		console.log("-.4+.32".search(pattern) > -1 ? true : false)
+		console.log("-.4-.32".search(pattern) > -1 ? true : false)
+		console.log("-.4×.32".search(pattern) > -1 ? true : false)
+		console.log("-.4/.32".search(pattern) > -1 ? true : false)
+
+		console.log("-0.4+0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.4-0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.4×0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.4/0.32".search(pattern) > -1 ? true : false)
+
+		console.log(".42+32".search(pattern) > -1 ? true : false)
+		console.log(".42-32".search(pattern) > -1 ? true : false)
+		console.log(".42×32".search(pattern) > -1 ? true : false)
+		console.log(".42/32".search(pattern) > -1 ? true : false)
+
+		console.log("42+.32".search(pattern) > -1 ? true : false)
+		console.log("42-.32".search(pattern) > -1 ? true : false)
+		console.log("42×.32".search(pattern) > -1 ? true : false)
+		console.log("42/.32".search(pattern) > -1 ? true : false)
+
+		console.log("0.42+32".search(pattern) > -1 ? true : false)
+		console.log("0.42-32".search(pattern) > -1 ? true : false)
+		console.log("0.42×32".search(pattern) > -1 ? true : false)
+		console.log("0.42/32".search(pattern) > -1 ? true : false)
+
+		console.log("42+0.32".search(pattern) > -1 ? true : false)
+		console.log("42-0.32".search(pattern) > -1 ? true : false)
+		console.log("42×0.32".search(pattern) > -1 ? true : false)
+		console.log("42/0.32".search(pattern) > -1 ? true : false)
+
+		console.log(".42+.32".search(pattern) > -1 ? true : false)
+		console.log(".42-.32".search(pattern) > -1 ? true : false)
+		console.log(".42×.32".search(pattern) > -1 ? true : false)
+		console.log(".42/.32".search(pattern) > -1 ? true : false)
+
+		console.log("0.42+0.32".search(pattern) > -1 ? true : false)
+		console.log("0.42-0.32".search(pattern) > -1 ? true : false)
+		console.log("0.42×0.32".search(pattern) > -1 ? true : false)
+		console.log("0.42/0.32".search(pattern) > -1 ? true : false)
+
+		console.log("-.42+32".search(pattern) > -1 ? true : false)
+		console.log("-.42-32".search(pattern) > -1 ? true : false)
+		console.log("-.42×32".search(pattern) > -1 ? true : false)
+		console.log("-.42/32".search(pattern) > -1 ? true : false)
+
+		console.log("-42+.32".search(pattern) > -1 ? true : false)
+		console.log("-42-.32".search(pattern) > -1 ? true : false)
+		console.log("-42×.32".search(pattern) > -1 ? true : false)
+		console.log("-42/.32".search(pattern) > -1 ? true : false)
+
+		console.log("-0.42+32".search(pattern) > -1 ? true : false)
+		console.log("-0.42-32".search(pattern) > -1 ? true : false)
+		console.log("-0.42×32".search(pattern) > -1 ? true : false)
+		console.log("-0.42/32".search(pattern) > -1 ? true : false)
+
+		console.log("-42+0.32".search(pattern) > -1 ? true : false)
+		console.log("-42-0.32".search(pattern) > -1 ? true : false)
+		console.log("-42×0.32".search(pattern) > -1 ? true : false)
+		console.log("-42/0.32".search(pattern) > -1 ? true : false)
+
+		console.log("-.42+.32".search(pattern) > -1 ? true : false)
+		console.log("-.42-.32".search(pattern) > -1 ? true : false)
+		console.log("-.42×.32".search(pattern) > -1 ? true : false)
+		console.log("-.42/.32".search(pattern) > -1 ? true : false)
+
+		console.log("-0.42+0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.42-0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.42×0.32".search(pattern) > -1 ? true : false)
+		console.log("-0.42/0.32".search(pattern) > -1 ? true : false)
+
+
+
+		console.log("4+2".search(pattern) > -1 ? true : false)
+		console.log("4-2".search(pattern) > -1 ? true : false)
+		console.log("4×2".search(pattern) > -1 ? true : false)
+		console.log("4/2".search(pattern) > -1 ? true : false)
+
+		console.log("43+2".search(pattern) > -1 ? true : false)
+		console.log("43-2".search(pattern) > -1 ? true : false)
+		console.log("43×2".search(pattern) > -1 ? true : false)
+		console.log("43/2".search(pattern) > -1 ? true : false)
+
+		console.log("4+23".search(pattern) > -1 ? true : false)
+		console.log("4-23".search(pattern) > -1 ? true : false)
+		console.log("4×23".search(pattern) > -1 ? true : false)
+		console.log("4/23".search(pattern) > -1 ? true : false)
+
+		console.log("43+23".search(pattern) > -1 ? true : false)
+		console.log("43-23".search(pattern) > -1 ? true : false)
+		console.log("43×23".search(pattern) > -1 ? true : false)
+		console.log("43/23".search(pattern) > -1 ? true : false)
+
+		console.log("-4+2".search(pattern) > -1 ? true : false)
+		console.log("-4-2".search(pattern) > -1 ? true : false)
+		console.log("-4×2".search(pattern) > -1 ? true : false)
+		console.log("-4/2".search(pattern) > -1 ? true : false)
+
+		console.log("-43+2".search(pattern) > -1 ? true : false)
+		console.log("-43-2".search(pattern) > -1 ? true : false)
+		console.log("-43×2".search(pattern) > -1 ? true : false)
+		console.log("-43/2".search(pattern) > -1 ? true : false)
+
+		console.log("-4+23".search(pattern) > -1 ? true : false)
+		console.log("-4-23".search(pattern) > -1 ? true : false)
+		console.log("-4×23".search(pattern) > -1 ? true : false)
+		console.log("-4/23".search(pattern) > -1 ? true : false)
+
+		console.log("-43+23".search(pattern) > -1 ? true : false)
+		console.log("-43-23".search(pattern) > -1 ? true : false)
+		console.log("-43×23".search(pattern) > -1 ? true : false)
+		console.log("-43/23".search(pattern) > -1 ? true : false)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

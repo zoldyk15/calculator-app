@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculate</title>
+	<script src="./js/jquery.min.js" defer></script>
+	<script>
+		
+		let calculate = (statement) => {
+			let higher_pattern = /^-?(?:\.|(?:\d+\.))?\d+[×\/](?:\.|(?:\d+\.))?\d+|(?:\.|(?:\d+\.))?\d+[×\/](?:\.|(?:\d+\.))?\d+/
+			let lower_pattern = /^-?(?:\.|(?:\d+\.))?\d+[-\+](?:\.|(?:\d+\.))?\d+/
+
+			// calculate for higher pattern first
+			while(statement.search(higher_pattern) > -1){
+				let [result] = statement.match(higher_pattern);
+				let [,operand1, operator, operand2] = getOperandsAndOperator(result);
+				let calc_val = compute([operand1, operand2], operator);
+				statement = statement.replace(result,calc_val);
+			}
+
+			// then calculate for lower pattern
+			while(statement.search(lower_pattern) > -1){
+				let [result] = statement.match(lower_pattern);
+				let [,operand1, operator, operand2] = getOperandsAndOperator(result);
+				let calc_val = compute([operand1, operand2], operator);
+				statement = statement.replace(result,calc_val);
+			}
+
+			return statement;
+		}
+
+
+		let compute = (operands, operator) => {
+			switch(operator){
+				case '+':
+					return Number(operands[0]) + Number(operands[1]);
+				case '-':
+					return Number(operands[0]) - Number(operands[1]);
+				case '×':
+					return Number(operands[0]) * Number(operands[1]);
+				case '/':
+					return Number(operands[0]) / Number(operands[1]);								
+			}
+		}
+
+
+		let getOperandsAndOperator = (formula) => {
+			let regEx = /(^-?(?:\.|(?:\d+\.))?\d+)([-\+×\/])((?:\.|(?:\d+\.))?\d+)/g;
+			let matches = regEx.exec(formula);
+
+			return matches;
+		}
+
+		console.log(calculate("2+2×2+2"))
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

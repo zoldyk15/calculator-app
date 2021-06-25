@@ -3,24 +3,25 @@
 	/* Common  */
 
 	/* Theme 1  */
-		--main-bg: hsl(222, 26%, 31%);
-		--toggle-bg: hsl(223, 31%, 20%);
-		--screen-bg: hsl(224, 36%, 15%);
+		--theme1-main-bg: hsl(222, 26%, 31%);
+		--theme1-toggle-bg: hsl(223, 31%, 20%);
+		--theme1-screen-bg: hsl(224, 36%, 15%);
 
 		/* Special keys  */
-		--skey-bg: hsl(225, 21%, 49%);
-		--skey-shadow: hsl(224, 28%, 35%);
-		--equal-key-bg: hsl(6, 63%, 50%);
-		--equal-key-shadow: hsl(6, 70%, 34%);
+		--theme1-skey-bg: hsl(225, 21%, 49%);
+		--theme1-skey-shadow: hsl(224, 28%, 35%);
+		--theme1-equal-key-bg: hsl(6, 63%, 50%);
+		--theme1-equal-key-shadow: hsl(6, 70%, 34%);
 
 		/* Keys  */
-		--key-bg: hsl(30, 25%, 89%);
-		--key-shadow: hsl(28, 16%, 65%);
+		--theme1-key-bg: hsl(30, 25%, 89%);
+		--theme1-key-shadow: hsl(28, 16%, 65%);
 
 		/* Text  */
-		--btn-txt: hsl(221, 14%, 31%);
-		--txt: #fff;
-		--total: #a6a6a6;
+		--theme1-btn-txt: hsl(221, 14%, 31%);
+		--theme1-txt: #fff;
+		--theme1-total: #a6a6a6;
+		--theme1-total-active: #fff;
 }
 
 
@@ -37,8 +38,8 @@ ul{
 
 
 .theme-main-bg{
-	background-color: var(--main-bg);
-	color: var(--txt);
+	background-color: var(--theme1-main-bg);
+	color: var(--theme1-txt);
 	border: 1px solid transparent;
 	height: 100vh;
 }
@@ -99,7 +100,7 @@ ul{
 }
 
 .toggle-btn{
-	background-color: var(--toggle-bg);
+	background-color: var(--theme1-toggle-bg);
 	padding: 5px 5px;
 	border-radius: 20px;
 }
@@ -112,12 +113,12 @@ ul{
 }
 
 .toggle-btn > li.active{
-	background-color: var(--equal-key-bg);
+	background-color: var(--theme1-equal-key-bg);
 }
 
 
 .screen{
-	background-color: var(--screen-bg);
+	background-color: var(--theme1-screen-bg);
 	min-height: 5.5rem;
 	margin: 2.8rem 0 1.5rem 0;
 	display: flex;
@@ -130,7 +131,7 @@ ul{
 
 
 .screen > div:nth-child(2){
-	color: var(--total);
+	color: var(--theme1-total);
 }
 
 .key-grp,
@@ -155,7 +156,7 @@ ul{
 		"key-dot key0    key-div key-tim"
 		"key-res key-res key-eql key-eql";
 	gap: 0.81rem;
-	background-color: var(--toggle-bg);
+	background-color: var(--theme1-toggle-bg);
 }
 
 .key-grp > div{
@@ -198,19 +199,19 @@ ul{
 }
 
 .num-op-key{
-	background-color: var(--key-bg);
-	color: var(--btn-txt);
-	border-bottom-color: var(--key-shadow);
+	background-color: var(--theme1-key-bg);
+	color: var(--theme1-btn-txt);
+	border-bottom-color: var(--theme1-key-shadow);
 }
 
 .special-key{
-	background-color: var(--skey-bg);
-	border-bottom-color: var(--skey-shadow);
+	background-color: var(--theme1-skey-bg);
+	border-bottom-color: var(--theme1-skey-shadow);
 }
 
 .eql-key{
-	background-color: var(--equal-key-bg);
-	border-bottom-color: var(--equal-key-shadow);
+	background-color: var(--theme1-equal-key-bg);
+	border-bottom-color: var(--theme1-equal-key-shadow);
 }
 
 

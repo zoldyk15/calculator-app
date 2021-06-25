@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getOperandsAndOperator</title>
+	<script>
+		
+
+		let getOperandsAndOperator = (formula) => {
+			let regEx = /(^-?(?:\.|(?:\d+\.))?\d+)([-\+×\/])((?:\.|(?:\d+\.))?\d+)/g;
+			let matches = regEx.exec(formula);
+
+			return matches;
+		}
+
+		console.log(getOperandsAndOperator(".4+3"))
+		console.log(getOperandsAndOperator(".4-3"))
+		console.log(getOperandsAndOperator(".4×3"))
+		console.log(getOperandsAndOperator(".4/3"))
+
+		console.log(getOperandsAndOperator("4+.3"))
+		console.log(getOperandsAndOperator("4-.3"))
+		console.log(getOperandsAndOperator("4×.3"))
+		console.log(getOperandsAndOperator("4/.3"))
+
+		console.log(getOperandsAndOperator("0.4+3"))
+		console.log(getOperandsAndOperator("0.4-3"))
+		console.log(getOperandsAndOperator("0.4×3"))
+		console.log(getOperandsAndOperator("0.4/3"))
+
+		console.log(getOperandsAndOperator("4+0.3"))
+		console.log(getOperandsAndOperator("4-0.3"))
+		console.log(getOperandsAndOperator("4×0.3"))
+		console.log(getOperandsAndOperator("4/0.3"))
+
+		console.log(getOperandsAndOperator(".4+.3"))
+		console.log(getOperandsAndOperator(".4-.3"))
+		console.log(getOperandsAndOperator(".4×.3"))
+		console.log(getOperandsAndOperator(".4/.3"))
+
+		console.log(getOperandsAndOperator("0.4+0.3"))
+		console.log(getOperandsAndOperator("0.4-0.3"))
+		console.log(getOperandsAndOperator("0.4×0.3"))
+		console.log(getOperandsAndOperator("0.4/0.3"))
+
+		console.log(getOperandsAndOperator("-.4+3"))
+		console.log(getOperandsAndOperator("-.4-3"))
+		console.log(getOperandsAndOperator("-.4×3"))
+		console.log(getOperandsAndOperator("-.4/3"))
+
+		console.log(getOperandsAndOperator("-4+.3"))
+		console.log(getOperandsAndOperator("-4-.3"))
+		console.log(getOperandsAndOperator("-4×.3"))
+		console.log(getOperandsAndOperator("-4/.3"))
+
+		console.log(getOperandsAndOperator("-0.4+3"))
+		console.log(getOperandsAndOperator("-0.4-3"))
+		console.log(getOperandsAndOperator("-0.4×3"))
+		console.log(getOperandsAndOperator("-0.4/3"))
+
+		console.log(getOperandsAndOperator("-4+0.3"))
+		console.log(getOperandsAndOperator("-4-0.3"))
+		console.log(getOperandsAndOperator("-4×0.3"))
+		console.log(getOperandsAndOperator("-4/0.3"))
+
+		console.log(getOperandsAndOperator("-.4+.3"))
+		console.log(getOperandsAndOperator("-.4-.3"))
+		console.log(getOperandsAndOperator("-.4×.3"))
+		console.log(getOperandsAndOperator("-.4/.3"))
+
+		console.log(getOperandsAndOperator("-0.4+0.3"))
+		console.log(getOperandsAndOperator("-0.4-0.3"))
+		console.log(getOperandsAndOperator("-0.4×0.3"))
+		console.log(getOperandsAndOperator("-0.4/0.3"))
+
+		console.log(getOperandsAndOperator(".42+3"))
+		console.log(getOperandsAndOperator(".42-3"))
+		console.log(getOperandsAndOperator(".42×3"))
+		console.log(getOperandsAndOperator(".42/3"))
+
+		console.log(getOperandsAndOperator("42+.3"))
+		console.log(getOperandsAndOperator("42-.3"))
+		console.log(getOperandsAndOperator("42×.3"))
+		console.log(getOperandsAndOperator("42/.3"))
+
+		console.log(getOperandsAndOperator("0.42+3"))
+		console.log(getOperandsAndOperator("0.42-3"))
+		console.log(getOperandsAndOperator("0.42×3"))
+		console.log(getOperandsAndOperator("0.42/3"))
+
+		console.log(getOperandsAndOperator("42+0.3"))
+		console.log(getOperandsAndOperator("42-0.3"))
+		console.log(getOperandsAndOperator("42×0.3"))
+		console.log(getOperandsAndOperator("42/0.3"))
+
+		console.log(getOperandsAndOperator(".42+.3"))
+		console.log(getOperandsAndOperator(".42-.3"))
+		console.log(getOperandsAndOperator(".42×.3"))
+		console.log(getOperandsAndOperator(".42/.3"))
+
+		console.log(getOperandsAndOperator("0.42+0.3"))
+		console.log(getOperandsAndOperator("0.42-0.3"))
+		console.log(getOperandsAndOperator("0.42×0.3"))
+		console.log(getOperandsAndOperator("0.42/0.3"))
+
+		console.log(getOperandsAndOperator("-.42+3"))
+		console.log(getOperandsAndOperator("-.42-3"))
+		console.log(getOperandsAndOperator("-.42×3"))
+		console.log(getOperandsAndOperator("-.42/3"))
+
+		console.log(getOperandsAndOperator("-42+.3"))
+		console.log(getOperandsAndOperator("-42-.3"))
+		console.log(getOperandsAndOperator("-42×.3"))
+		console.log(getOperandsAndOperator("-42/.3"))
+
+		console.log(getOperandsAndOperator("-0.42+3"))
+		console.log(getOperandsAndOperator("-0.42-3"))
+		console.log(getOperandsAndOperator("-0.42×3"))
+		console.log(getOperandsAndOperator("-0.42/3"))
+
+		console.log(getOperandsAndOperator("-42+0.3"))
+		console.log(getOperandsAndOperator("-42-0.3"))
+		console.log(getOperandsAndOperator("-42×0.3"))
+		console.log(getOperandsAndOperator("-42/0.3"))
+
+		console.log(getOperandsAndOperator("-.42+.3"))
+		console.log(getOperandsAndOperator("-.42-.3"))
+		console.log(getOperandsAndOperator("-.42×.3"))
+		console.log(getOperandsAndOperator("-.42/.3"))
+
+		console.log(getOperandsAndOperator("-0.42+0.3"))
+		console.log(getOperandsAndOperator("-0.42-0.3"))
+		console.log(getOperandsAndOperator("-0.42×0.3"))
+		console.log(getOperandsAndOperator("-0.42/0.3"))
+
+		console.log(getOperandsAndOperator(".4+32"))
+		console.log(getOperandsAndOperator(".4-32"))
+		console.log(getOperandsAndOperator(".4×32"))
+		console.log(getOperandsAndOperator(".4/32"))
+
+		console.log(getOperandsAndOperator("4+.32"))
+		console.log(getOperandsAndOperator("4-.32"))
+		console.log(getOperandsAndOperator("4×.32"))
+		console.log(getOperandsAndOperator("4/.32"))
+
+		console.log(getOperandsAndOperator("0.4+32"))
+		console.log(getOperandsAndOperator("0.4-32"))
+		console.log(getOperandsAndOperator("0.4×32"))
+		console.log(getOperandsAndOperator("0.4/32"))
+
+		console.log(getOperandsAndOperator("4+0.32"))
+		console.log(getOperandsAndOperator("4-0.32"))
+		console.log(getOperandsAndOperator("4×0.32"))
+		console.log(getOperandsAndOperator("4/0.32"))
+
+		console.log(getOperandsAndOperator(".4+.32"))
+		console.log(getOperandsAndOperator(".4-.32"))
+		console.log(getOperandsAndOperator(".4×.32"))
+		console.log(getOperandsAndOperator(".4/.32"))
+
+		console.log(getOperandsAndOperator("0.4+0.32"))
+		console.log(getOperandsAndOperator("0.4-0.32"))
+		console.log(getOperandsAndOperator("0.4×0.32"))
+		console.log(getOperandsAndOperator("0.4/0.32"))
+
+		console.log(getOperandsAndOperator("-.4+32"))
+		console.log(getOperandsAndOperator("-.4-32"))
+		console.log(getOperandsAndOperator("-.4×32"))
+		console.log(getOperandsAndOperator("-.4/32"))
+
+		console.log(getOperandsAndOperator("-4+.32"))
+		console.log(getOperandsAndOperator("-4-.32"))
+		console.log(getOperandsAndOperator("-4×.32"))
+		console.log(getOperandsAndOperator("-4/.32"))
+
+		console.log(getOperandsAndOperator("-0.4+32"))
+		console.log(getOperandsAndOperator("-0.4-32"))
+		console.log(getOperandsAndOperator("-0.4×32"))
+		console.log(getOperandsAndOperator("-0.4/32"))
+
+		console.log(getOperandsAndOperator("-4+0.32"))
+		console.log(getOperandsAndOperator("-4-0.32"))
+		console.log(getOperandsAndOperator("-4×0.32"))
+		console.log(getOperandsAndOperator("-4/0.32"))
+
+		console.log(getOperandsAndOperator("-.4+.32"))
+		console.log(getOperandsAndOperator("-.4-.32"))
+		console.log(getOperandsAndOperator("-.4×.32"))
+		console.log(getOperandsAndOperator("-.4/.32"))
+
+		console.log(getOperandsAndOperator("-0.4+0.32"))
+		console.log(getOperandsAndOperator("-0.4-0.32"))
+		console.log(getOperandsAndOperator("-0.4×0.32"))
+		console.log(getOperandsAndOperator("-0.4/0.32"))
+
+		console.log(getOperandsAndOperator(".42+32"))
+		console.log(getOperandsAndOperator(".42-32"))
+		console.log(getOperandsAndOperator(".42×32"))
+		console.log(getOperandsAndOperator(".42/32"))
+
+		console.log(getOperandsAndOperator("42+.32"))
+		console.log(getOperandsAndOperator("42-.32"))
+		console.log(getOperandsAndOperator("42×.32"))
+		console.log(getOperandsAndOperator("42/.32"))
+
+		console.log(getOperandsAndOperator("0.42+32"))
+		console.log(getOperandsAndOperator("0.42-32"))
+		console.log(getOperandsAndOperator("0.42×32"))
+		console.log(getOperandsAndOperator("0.42/32"))
+
+		console.log(getOperandsAndOperator("42+0.32"))
+		console.log(getOperandsAndOperator("42-0.32"))
+		console.log(getOperandsAndOperator("42×0.32"))
+		console.log(getOperandsAndOperator("42/0.32"))
+
+		console.log(getOperandsAndOperator(".42+.32"))
+		console.log(getOperandsAndOperator(".42-.32"))
+		console.log(getOperandsAndOperator(".42×.32"))
+		console.log(getOperandsAndOperator(".42/.32"))
+
+		console.log(getOperandsAndOperator("0.42+0.32"))
+		console.log(getOperandsAndOperator("0.42-0.32"))
+		console.log(getOperandsAndOperator("0.42×0.32"))
+		console.log(getOperandsAndOperator("0.42/0.32"))
+
+		console.log(getOperandsAndOperator("-.42+32"))
+		console.log(getOperandsAndOperator("-.42-32"))
+		console.log(getOperandsAndOperator("-.42×32"))
+		console.log(getOperandsAndOperator("-.42/32"))
+
+		console.log(getOperandsAndOperator("-42+.32"))
+		console.log(getOperandsAndOperator("-42-.32"))
+		console.log(getOperandsAndOperator("-42×.32"))
+		console.log(getOperandsAndOperator("-42/.32"))
+
+		console.log(getOperandsAndOperator("-0.42+32"))
+		console.log(getOperandsAndOperator("-0.42-32"))
+		console.log(getOperandsAndOperator("-0.42×32"))
+		console.log(getOperandsAndOperator("-0.42/32"))
+
+		console.log(getOperandsAndOperator("-42+0.32"))
+		console.log(getOperandsAndOperator("-42-0.32"))
+		console.log(getOperandsAndOperator("-42×0.32"))
+		console.log(getOperandsAndOperator("-42/0.32"))
+
+		console.log(getOperandsAndOperator("-.42+.32"))
+		console.log(getOperandsAndOperator("-.42-.32"))
+		console.log(getOperandsAndOperator("-.42×.32"))
+		console.log(getOperandsAndOperator("-.42/.32"))
+
+		console.log(getOperandsAndOperator("-0.42+0.32"))
+		console.log(getOperandsAndOperator("-0.42-0.32"))
+		console.log(getOperandsAndOperator("-0.42×0.32"))
+		console.log(getOperandsAndOperator("-0.42/0.32"))
+
+
+
+		console.log(getOperandsAndOperator("4+2"))
+		console.log(getOperandsAndOperator("4-2"))
+		console.log(getOperandsAndOperator("4×2"))
+		console.log(getOperandsAndOperator("4/2"))
+
+		console.log(getOperandsAndOperator("43+2"))
+		console.log(getOperandsAndOperator("43-2"))
+		console.log(getOperandsAndOperator("43×2"))
+		console.log(getOperandsAndOperator("43/2"))
+
+		console.log(getOperandsAndOperator("4+23"))
+		console.log(getOperandsAndOperator("4-23"))
+		console.log(getOperandsAndOperator("4×23"))
+		console.log(getOperandsAndOperator("4/23"))
+
+		console.log(getOperandsAndOperator("43+23"))
+		console.log(getOperandsAndOperator("43-23"))
+		console.log(getOperandsAndOperator("43×23"))
+		console.log(getOperandsAndOperator("43/23"))
+
+		console.log(getOperandsAndOperator("-4+2"))
+		console.log(getOperandsAndOperator("-4-2"))
+		console.log(getOperandsAndOperator("-4×2"))
+		console.log(getOperandsAndOperator("-4/2"))
+
+		console.log(getOperandsAndOperator("-43+2"))
+		console.log(getOperandsAndOperator("-43-2"))
+		console.log(getOperandsAndOperator("-43×2"))
+		console.log(getOperandsAndOperator("-43/2"))
+
+		console.log(getOperandsAndOperator("-4+23"))
+		console.log(getOperandsAndOperator("-4-23"))
+		console.log(getOperandsAndOperator("-4×23"))
+		console.log(getOperandsAndOperator("-4/23"))
+
+		console.log(getOperandsAndOperator("-43+23"))
+		console.log(getOperandsAndOperator("-43-23"))
+		console.log(getOperandsAndOperator("-43×23"))
+		console.log(getOperandsAndOperator("-43/23"))
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
