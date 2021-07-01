@@ -8,8 +8,10 @@
 		--theme1-screen-bg: hsl(224, 36%, 15%);
 
 		/* Special keys  */
+		--theme1-skey-txt: #fff;
 		--theme1-skey-bg: hsl(225, 21%, 49%);
 		--theme1-skey-shadow: hsl(224, 28%, 35%);
+		--theme1-equal-key-txt: #fff;
 		--theme1-equal-key-bg: hsl(6, 63%, 50%);
 		--theme1-equal-key-shadow: hsl(6, 70%, 34%);
 
@@ -22,6 +24,54 @@
 		--theme1-txt: #fff;
 		--theme1-total: #a6a6a6;
 		--theme1-total-active: #fff;
+
+
+	/* Theme 2  */
+		--theme2-main-bg: hsl(0, 0%, 90%);
+		--theme2-toggle-bg: hsl(0, 5%, 81%);
+		--theme2-screen-bg: hsl(0, 0%, 93%);
+
+		/* Special keys  */
+		--theme2-skey-txt: #fff;
+		--theme2-skey-bg: hsl(185, 42%, 37%);
+		--theme2-skey-shadow: hsl(185, 58%, 25%);
+		--theme2-equal-key-txt: #fff;
+		--theme2-equal-key-bg: hsl(25, 98%, 40%);
+		--theme2-equal-key-shadow: hsl(25, 99%, 27%);
+
+		/* Keys  */
+		--theme2-key-bg: hsl(45, 7%, 89%);
+		--theme2-key-shadow: hsl(35, 11%, 61%);
+
+		/* Text  */
+		--theme2-btn-txt: hsl(60, 10%, 19%);
+		--theme2-txt: hsl(60, 10%, 19%);
+		--theme2-total: #a6a6a6;
+		--theme2-total-active: hsl(60, 10%, 19%);
+
+
+	/* Theme 3  */
+		--theme3-main-bg: hsl(268, 75%, 9%);
+		--theme3-toggle-bg: hsl(268, 71%, 12%);
+		--theme3-screen-bg: hsl(268, 71%, 12%);
+
+		/* Special keys  */
+		--theme3-skey-txt: #fff;
+		--theme3-skey-bg: hsl(281, 89%, 26%);
+		--theme3-skey-shadow: hsl(285, 91%, 52%);
+		--theme3-equal-key-txt: #000;
+		--theme3-equal-key-bg: hsl(176, 100%, 44%);
+		--theme3-equal-key-shadow: hsl(177, 92%, 70%);
+
+		/* Keys  */
+		--theme3-key-bg: hsl(268, 47%, 21%);
+		--theme3-key-shadow: hsl(290, 70%, 36%);
+
+		/* Text  */
+		--theme3-btn-txt: hsl(52, 100%, 62%);
+		--theme3-txt: hsl(52, 100%, 62%);
+		--theme3-total: #a6a6a6;
+		--theme3-total-active: hsl(52, 100%, 62%);
 }
 
 
@@ -37,11 +87,158 @@ ul{
 }
 
 
-.theme-main-bg{
+/* Theme 1 */
+.theme1.theme-main-bg{
 	background-color: var(--theme1-main-bg);
 	color: var(--theme1-txt);
+}
+
+.theme1.toggle-btn{
+	background-color: var(--theme1-toggle-bg);
+}
+
+.theme1.toggle-btn > li.active{
+	background-color: var(--theme1-equal-key-bg);
+}
+
+.theme1.screen{
+	background-color: var(--theme1-screen-bg);
+}
+
+.theme1.screen > div:nth-child(2){
+	color: var(--theme1-total);
+}
+
+.theme1#total.eql{
+	color: var(--theme1-total-active);
+}
+
+.theme1.key-grp{
+	background-color: var(--theme1-toggle-bg);
+}
+
+.theme1.num-op-key{
+	background-color: var(--theme1-key-bg);
+	color: var(--theme1-btn-txt);
+	border-bottom-color: var(--theme1-key-shadow);
+}
+
+.theme1.special-key{
+	background-color: var(--theme1-skey-bg);
+	border-bottom-color: var(--theme1-skey-shadow);
+	color: var(--theme1-skey-txt);
+}
+
+.theme1.eql-key{
+	background-color: var(--theme1-equal-key-bg);
+	border-bottom-color: var(--theme1-equal-key-shadow);
+	color: var(--theme1-equal-key-txt);
+}
+
+
+/* Theme 2 */
+.theme2.theme-main-bg{
+	background-color: var(--theme2-main-bg);
+	color: var(--theme2-txt);
+}
+
+.theme2.toggle-btn{
+	background-color: var(--theme2-toggle-bg);
+}
+
+.theme2.toggle-btn > li.active{
+	background-color: var(--theme2-equal-key-bg);
+}
+
+.theme2.screen{
+	background-color: var(--theme2-screen-bg);
+}
+
+.theme2.screen > div:nth-child(2){
+	color: var(--theme2-total);
+}
+
+.theme2#total.eql{
+	color: var(--theme2-total-active);
+}
+
+.theme2.key-grp{
+	background-color: var(--theme2-toggle-bg);
+}
+
+.theme2.num-op-key{
+	background-color: var(--theme2-key-bg);
+	color: var(--theme2-btn-txt);
+	border-bottom-color: var(--theme2-key-shadow);
+}
+
+.theme2.special-key{
+	background-color: var(--theme2-skey-bg);
+	border-bottom-color: var(--theme2-skey-shadow);
+	color: var(--theme2-skey-txt);
+}
+
+.theme2.eql-key{
+	background-color: var(--theme2-equal-key-bg);
+	border-bottom-color: var(--theme2-equal-key-shadow);
+	color: var(--theme2-equal-key-txt);
+}
+
+
+/* Theme 3 */
+.theme3.theme-main-bg{
+	background-color: var(--theme3-main-bg);
+	color: var(--theme3-txt);
+}
+
+.theme3.toggle-btn{
+	background-color: var(--theme3-toggle-bg);
+}
+
+.theme3.toggle-btn > li.active{
+	background-color: var(--theme3-equal-key-bg);
+}
+
+.theme3.screen{
+	background-color: var(--theme3-screen-bg);
+}
+
+.theme3.screen > div:nth-child(2){
+	color: var(--theme3-total);
+}
+
+.theme3#total.eql{
+	color: var(--theme3-total-active);
+}
+
+.theme3.key-grp{
+	background-color: var(--theme3-toggle-bg);
+}
+
+.theme3.num-op-key{
+	background-color: var(--theme3-key-bg);
+	color: var(--theme3-btn-txt);
+	border-bottom-color: var(--theme3-key-shadow);
+}
+
+.theme3.special-key{
+	background-color: var(--theme3-skey-bg);
+	border-bottom-color: var(--theme3-skey-shadow);
+	color: var(--theme3-skey-txt);
+}
+
+.theme3.eql-key{
+	background-color: var(--theme3-equal-key-bg);
+	border-bottom-color: var(--theme3-equal-key-shadow);
+	color: var(--theme3-equal-key-txt);
+}
+
+
+
+.theme-main-bg{
 	border: 1px solid transparent;
-	height: 100vh;
+	min-height: 100vh;
+	overflow: auto;
 }
 
 .container{
@@ -100,7 +297,6 @@ ul{
 }
 
 .toggle-btn{
-	background-color: var(--theme1-toggle-bg);
 	padding: 5px 5px;
 	border-radius: 20px;
 }
@@ -110,15 +306,11 @@ ul{
 	width: 2rem;
 	border-radius: 50%;
 	background-color: transparent;
-}
-
-.toggle-btn > li.active{
-	background-color: var(--theme1-equal-key-bg);
+	cursor: pointer;
 }
 
 
 .screen{
-	background-color: var(--theme1-screen-bg);
 	min-height: 5.5rem;
 	margin: 2.8rem 0 1.5rem 0;
 	display: flex;
@@ -129,10 +321,6 @@ ul{
 	font-size: 1.3rem;
 }
 
-
-.screen > div:nth-child(2){
-	color: var(--theme1-total);
-}
 
 .key-grp,
 .screen{
@@ -146,6 +334,7 @@ ul{
 .key-grp{
 	padding: 2rem;
 	height: 100%;
+	min-height: 27em;
 	display: grid; 
 	grid-template-columns: repeat(4, 1fr); 
 	grid-template-rows: repeat(5, 1fr); 
@@ -156,7 +345,6 @@ ul{
 		"key-dot key0    key-div key-tim"
 		"key-res key-res key-eql key-eql";
 	gap: 0.81rem;
-	background-color: var(--theme1-toggle-bg);
 }
 
 .key-grp > div{
@@ -198,20 +386,9 @@ ul{
 	border-bottom-width: 0.33rem;
 }
 
-.num-op-key{
-	background-color: var(--theme1-key-bg);
-	color: var(--theme1-btn-txt);
-	border-bottom-color: var(--theme1-key-shadow);
-}
 
-.special-key{
-	background-color: var(--theme1-skey-bg);
-	border-bottom-color: var(--theme1-skey-shadow);
-}
-
-.eql-key{
-	background-color: var(--theme1-equal-key-bg);
-	border-bottom-color: var(--theme1-equal-key-shadow);
+#formula{
+	font-weight: 900;
 }
 
 

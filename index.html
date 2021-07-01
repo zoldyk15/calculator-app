@@ -16,58 +16,51 @@
 	<script src="./js/script.js" defer></script>
 
 	<title></title>
-	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-	</style>
 </head>
 <body>
-	<div class="theme-main-bg">
+	<div class="theme1 theme-main-bg">
 		<div class="container">
 			<div class="header">
 				<div class="logo">calc</div>
 				<div class="preference">
-					<div data-grid-element="theme">THEME</div>
+					<div data-grid-element="theme"><strong>THEME</strong></div>
 					<ul class="toggle-label" data-grid-element="label">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
+						<li><strong>1</strong></li>
+						<li><strong>2</strong></li>
+						<li><strong>3</strong></li>
 					</ul>
-					<ul class="toggle-btn" data-grid-element="button">
-						<li class="active" data-theme="1"></li>
-						<li data-theme="2"></li>
-						<li data-theme="3"></li>
+					<ul class="theme1 toggle-btn" data-grid-element="button">
+						<li id="theme1" class="active" data-theme="1"></li>
+						<li id="theme2" data-theme="2"></li>
+						<li id="theme3" data-theme="3"></li>
 					</ul>
 				</div>
 			</div>
-			<div class="screen">
+			<div class="theme1 screen">
 				<div id="formula"></div>
-				<div id="total"></div>
+				<div id="total" class="theme1"></div>
 			</div>
 			<div class="keypad">
-				<div class="key-grp">
+				<div class="theme1 key-grp">
 
-					<div id="key7"     class="key num-op-key num" data-value="7">7</div>
-					<div id="key8"     class="key num-op-key num" data-value="8">8</div>
-					<div id="key9"     class="key num-op-key num" data-value="9">9</div>
-					<div id="key-del"  class="key special-key" data-value="del">DEL</div>
-					<div id="key4"     class="key num-op-key num" data-value="4">4</div>
-					<div id="key5"     class="key num-op-key num" data-value="5">5</div>
-					<div id="key6"     class="key num-op-key num" data-value="6">6</div>
-					<div id="key-plus" class="key num-op-key op" data-value="+">+</div>
-					<div id="key1"     class="key num-op-key num" data-value="1">1</div>
-					<div id="key2"     class="key num-op-key num" data-value="2">2</div>
-					<div id="key3"     class="key num-op-key num" data-value="3">3</div>
-					<div id="key-min"  class="key num-op-key op" data-value="-">-</div>
-					<div id="key-dot"  class="key num-op-key" data-value=".">.</div>
-					<div id="key0"     class="key num-op-key num" data-value="0">0</div>
-					<div id="key-div"  class="key num-op-key op" data-value="/">/</div>
-					<div id="key-tim"  class="key num-op-key op" data-value="×">×</div>
-					<div id="key-res"  class="key special-key">RESET</div>
-					<div id="key-eql"  class="key eql-key">=</div>
+					<div id="key7"     class="theme1 key num-op-key num" data-value="7">7</div>
+					<div id="key8"     class="theme1 key num-op-key num" data-value="8">8</div>
+					<div id="key9"     class="theme1 key num-op-key num" data-value="9">9</div>
+					<div id="key-del"  class="theme1 key special-key" data-value="del">DEL</div>
+					<div id="key4"     class="theme1 key num-op-key num" data-value="4">4</div>
+					<div id="key5"     class="theme1 key num-op-key num" data-value="5">5</div>
+					<div id="key6"     class="theme1 key num-op-key num" data-value="6">6</div>
+					<div id="key-plus" class="theme1 key num-op-key op" data-value="+">+</div>
+					<div id="key1"     class="theme1 key num-op-key num" data-value="1">1</div>
+					<div id="key2"     class="theme1 key num-op-key num" data-value="2">2</div>
+					<div id="key3"     class="theme1 key num-op-key num" data-value="3">3</div>
+					<div id="key-min"  class="theme1 key num-op-key op" data-value="-">-</div>
+					<div id="key-dot"  class="theme1 key num-op-key" data-value=".">.</div>
+					<div id="key0"     class="theme1 key num-op-key num" data-value="0">0</div>
+					<div id="key-div"  class="theme1 key num-op-key op" data-value="/">/</div>
+					<div id="key-tim"  class="theme1 key num-op-key op" data-value="×">×</div>
+					<div id="key-res"  class="theme1 key special-key">RESET</div>
+					<div id="key-eql"  class="theme1 key eql-key">=</div>
 
 				</div>
 			</div>
